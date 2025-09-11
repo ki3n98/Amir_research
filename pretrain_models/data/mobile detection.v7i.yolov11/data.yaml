@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['drinking', 'eating', 'mobile use', 'smoking']
+
+roboflow:
+  workspace: asu-b6mtv
+  project: mobile-detection-l2iov
+  version: 7
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/asu-b6mtv/mobile-detection-l2iov/dataset/7

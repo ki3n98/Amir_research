@@ -1,16 +1,16 @@
 task: detect
 mode: train
 model: yolo11n.pt
-data: coco8.yaml
-epochs: 3
+data: ../data/mobile detection.v7i.yolov11/data.yaml
+epochs: 100
 time: null
 patience: 100
-batch: 16
+batch: 32
 imgsz: 640
 save: true
 save_period: -1
 cache: false
-device: cpu
+device: null
 workers: 8
 project: null
 name: train
@@ -102,4 +102,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: runs/detect/train
+save_dir: /home/kien/Desktop/projects/Amir_research/pretrain_models/pretrain_yolo/runs/detect/train
