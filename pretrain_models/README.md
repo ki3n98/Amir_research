@@ -23,11 +23,12 @@ Here are some example from the original training set:
 
 The performance of the three models was evaluated on a **test dataset of 270 images** using **mAP50–95**, **total inference time (s)**, and **time per image (s)**. The results are summarized below:
 
-| Model        | mAP50–95 | Total Time (s) | Time per Image (s) |
-|--------------|----------|----------------|--------------------|
-| YOLOv11      | 0.619530 | 44.522169      | 0.1649             |
-| Faster R-CNN | 0.556220 | 352.644127     | 1.3061             |
-| SSD          | 0.498391 | 32.049965      | 0.1187             |
+| model        | mAP50-95 |   time | time per image (s)  |  fps |
+|--------------|----------|--------|---------------------|------|
+| Yolov11      |     0.62 |  54.74 |                0.20 | 4.93 |
+| Faster-RCNN  |     0.56 | 433.41 |                1.61 | 0.62 |
+| SSD          |     0.50 |  43.20 |                0.16 | 6.25 |
+
 
 ### Interpretation
 - **YOLOv11** achieved the **highest accuracy (mAP50–95 = 0.6195)** with an average inference time of **0.165s per image**, making it a strong balance of speed and accuracy.  
