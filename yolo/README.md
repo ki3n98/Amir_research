@@ -15,7 +15,7 @@ This section compares YOLOv8, YOLOv9, YOLOv11, and YOLOv12 architectures on the 
 I downloaded the pretrained weights for each model from Ultralytics and performed transfer learning on the in-cabin dataset. The final model will be chosen based on achieving a minimum of **0.6 mAP** and maintaining **25 FPS or higher**. I am not uploading the weights to this notebook, as some exceed **100 MB** and cannot be hosted on GitHub.
 
 ## Results
-![yolo models plot: mAP50-95 vs FPS]("yolo/yolo_plot_map_fps.png")
+![yolo models plot: mAP50-95 vs FPS](yolo_plot_map_fps.png)
 
 The models **YOLOv8l, YOLOv8m, YOLOv11s, and YOLOv11m** all satisfy the defined selection criteria, achieving both **mAP values above 0.6** and **inference speeds greater than 25 FPS** on the in-cabin dataset. These results indicate that each of these models provides a strong balance between detection accuracy and real-time performance, making them suitable candidates for further consideration and potential deployment.
 
