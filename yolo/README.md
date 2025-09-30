@@ -20,6 +20,9 @@ I downloaded the pretrained weights for each model from Ultralytics and performe
 The models **YOLOv8l, YOLOv8m, YOLOv11s, and YOLOv11m** all satisfy the defined selection criteria, achieving both **mAP values above 0.6** and **inference speeds greater than 25 FPS** on the in-cabin dataset. These results indicate that each of these models provides a strong balance between detection accuracy and real-time performance, making them suitable candidates for further consideration and potential deployment.
 
 ## Real-Life Testing
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=MUZkTjd5ShM" 
+frameborder="0" allowfullscreen></iframe>
 In real-world tests, all models underperformed: they consistently failed to classify a **snack bag as food** and a **black phone as phone**. Among them, **YOLO11m** showed marginally better results, but the improvement was not sufficient to meet expectations.
 
 ## References
