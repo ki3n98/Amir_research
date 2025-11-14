@@ -27,3 +27,10 @@ In real-world tests, all models underperformed: they consistently failed to clas
 - [YouTube Demo](https://www.youtube.com/watch?v=MUZkTjd5ShM)  
 - [Roboflow Project](https://universe.roboflow.com/asu-b6mtv/mobile-detection-l2iov)  
 - [Ultralytics YOLO Documentation](https://docs.ultralytics.com/models/#featured-models)
+
+
+
+Theory of why model is doing bad:
+1. uneven amount of labels
+2. The model always predicting, eventhough there is no object
+3. 
