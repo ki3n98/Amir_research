@@ -10,3 +10,4 @@ pretrain_models/SSD/ssd_vgg16_custom.pth
 *.mov
 *.mp4
 /.venv
+/data
