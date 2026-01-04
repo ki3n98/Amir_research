@@ -1,0 +1,50 @@
+
+Benchmarks complete for ./runs/detect/train4/weights/best.pt on ../data/incabinDetection/data.yaml at imgsz=640 (281.17s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++-----------------------------------------------------------------------------------------------------------+
+|      Format                  Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++===========================================================================================================+
+| 1    PyTorch                 ✅         38.7        0.6092                10.57                    94.63  |
+| 2    TorchScript             ✅         77.1        0.6086                9.48                     105.46 |
+| 3    ONNX                    ✅         76.7        0.6086                13.01                    76.88  |
+| 4    OpenVINO                ❌         0.0         -                     -                        -      |
+| 5    TensorRT                ✅         79.5        0.608                 6.03                     165.72 |
+| 6    CoreML                  ❌         0.0         -                     -                        -      |
+| 7    TensorFlow SavedModel   ❌         0.0         -                     -                        -      |
+| 8    TensorFlow GraphDef     ❌         0.0         -                     -                        -      |
+| 9    TensorFlow Lite         ❌         0.0         -                     -                        -      |
+| 10   TensorFlow Edge TPU     ❌         0.0         -                     -                        -      |
+| 11   TensorFlow.js           ❌         0.0         -                     -                        -      |
+| 12   PaddlePaddle            ❌         0.0         -                     -                        -      |
+| 13   MNN                     ❌         0.0         -                     -                        -      |
+| 14   NCNN                    ✅         76.6        0.6085                170.69                   5.86   |
+| 15   IMX                     ❌         0.0         -                     -                        -      |
+| 16   RKNN                    ❌         0.0         -                     -                        -      |
+| 17   ExecuTorch              ❌         0.0         -                     -                        -      |
+| 18   Axelera                 ❌         0.0         -                     -                        -      |
++-----------------------------------------------------------------------------------------------------------+
+
+Benchmarks complete for ./runs/detect/train4/weights/best.pt on ../data/incabinDetection/data.yaml at imgsz=640 (142.35s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++-----------------------------------------------------------------------------------------------------------+
+|      Format                  Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++===========================================================================================================+
+| 1    PyTorch                 ✅         38.7        0.6041                11.61                    86.1   |
+| 2    TorchScript             ✅         77.1        0.6038                9.05                     110.49 |
+| 3    ONNX                    ✅         76.7        0.6039                13.37                    74.81  |
+| 4    OpenVINO                ❌         0.0         -                     -                        -      |
+| 5    TensorRT                ✅         78.9        0.604                 5.87                     170.31 |
+| 6    CoreML                  ❌         0.0         -                     -                        -      |
+| 7    TensorFlow SavedModel   ❌         0.0         -                     -                        -      |
+| 8    TensorFlow GraphDef     ❌         0.0         -                     -                        -      |
+| 9    TensorFlow Lite         ❌         0.0         -                     -                        -      |
+| 10   TensorFlow Edge TPU     ❌         0.0         -                     -                        -      |
+| 11   TensorFlow.js           ❌         0.0         -                     -                        -      |
+| 12   PaddlePaddle            ❌         0.0         -                     -                        -      |
+| 13   MNN                     ❌         0.0         -                     -                        -      |
+| 14   NCNN                    ✅         76.6        0.604                 286.08                   3.5    |
+| 15   IMX                     ❌         0.0         -                     -                        -      |
+| 16   RKNN                    ❌         0.0         -                     -                        -      |
+| 17   ExecuTorch              ❌         0.0         -                     -                        -      |
+| 18   Axelera                 ❌         0.0         -                     -                        -      |
++-----------------------------------------------------------------------------------------------------------+

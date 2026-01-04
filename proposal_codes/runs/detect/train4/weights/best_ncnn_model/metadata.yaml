@@ -1,0 +1,21 @@
+description: Ultralytics YOLO11m model trained on ../data/incabinDetection/data.yaml
+author: Ultralytics
+date: '2026-01-01T14:13:15.704482'
+version: 8.3.241
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: drinking
+  1: eating
+  2: mobile use
+  3: smoking
+args:
+  batch: 1
+  half: false
+channels: 3

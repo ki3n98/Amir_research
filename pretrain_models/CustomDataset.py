@@ -21,7 +21,9 @@ class CustomDataset():
         # Load image
         image = cv2.imread(img_path)
         if image is None:
-            raise FileNotFoundError(f"Image {img_path} not found.")
+                # Instead of raising an error, try to load the next image
+                print(f"Warning: Image {img_path} not found. Skipping to next.")
+                return self.__getitem__((idx + 1) % len(self))
 
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         height, width, _ = image.shape
