@@ -1,0 +1,92 @@
+Reviewer 1: 
+1. Summary. Provide a short summary (~3 - 6 sentences) of the paper. This should be based only on what's in the paper itself, without any opinion or analysis of your own.
+
+    This paper is about vision-based detection of distracted driving behaviors using three deep learning object detection architectures: Faster R-CNN, SSD, and YOLOv11, evaluated on the Roboflow Mobile Detection dataset. The authors describe the object detection problem, then describe the architectures in detail, emphasizing on trade off and speed. They train the three models with consistent data splits, preprocessing, augmentation, and training schedules and performance is measured using mAP across IoU thresholds and inference speed. Results show that YOLOv11 achieves the highest mAP of 0.604 and the fastest inference of 86.1 FPS, better performance than SSD and Faster R-CNN. The paper concludes that YOLOv11 gives best performance for real-time in-cabin monitoring, and future work can be explored on domain adaptation, temporal modeling, and multimodal sensing.
+
+2. Pros. Bullet points indicating good things about the paper (e.g., well-written, good results, thorough experimentation, clever idea, etc.)
+
+    Clear problem motivation. Strong justification using recent NHTSA statistics and requirements of accuracy and real-time performance clearly mentioned.
+    Detailed descriptions of Faster R-CNN, SSD, and YOLOv11 with mathematical formulations and module-level breakdowns.
+    Dataset splits, preprocessing, augmentation, and training schedules across models are mentioned clearly, good for fair comparison.
+    The comparison of mAP, FPS, runtime, and per-image latency is clearly summarized in a table and interpreted.
+
+3. Cons. Bullet points indicating bad things about the paper (e.g., difficult to understand, improperly evaluated, unoriginal, etc.)
+
+    Few experimental details needed: Important training hyperparameters like learning rate schedule specifics, batch size, number of epochs, hardware used are only briefly mentioned and could limit reproducibility.
+    There is no per-class breakdown for drinking vs. smoking or qualitative analysis of typical failure modes.
+    Dataset description could be deeper. Beyond class counts and oversampling, there is limited discussion of image diversity such as viewpoints, lighting, camera positions and how that might impact generalization.
+    Minor issues: A placeholder cross-reference (“Section ??”) appears instead of a proper section number.
+
+4. Overall thoughts. Your overall thoughts on the paper. This is free form, and should justify your scores. This should be relatively detailed, and provide useful feedback to the authors.
+
+    This is a good comparative study that has a good motivation and problem statement, and it fills a practical gap by benchmarking modern object detectors specifically for distracted driving detection in real world. The architectural review is precise and accessible, making the paper useful both as a reference and as guidance for practitioners who must choose a detector under latency constraints. the results are clearly mentioned YOLOv11 outperforms SSD and Faster R-CNN in both mAP and speed, making the recommended conclusion well-justified by the evidence presented. Where the work is weaker is in detailed analysis of failure cases and per-class performance, which would be especially important for a safety-critical domain, for example, mis-detecting mobile phone usage might be more consequential than missing eating, but this is not dissected. The combination of clear motivation, formalization makes this a helpful contribution that could be strengthened further by more analysis and broader discussion of deployment considerations.
+
+5. Detailed comments. If there are any minor details (e.g., typos, issues which were too small to mention in overall thoughts), these should go here. Depending on how detailed your overall thoughts are from the prior question, it may be appropriate to leave this section blank.
+
+    “Section ??” should be replaced with the appropriate section number.
+    In Table I, it would help to clarify the meaning of both “Runtime (s)” and “Inference Time (s)” and how they differ.
+
+6. Recommendation
+
+    Strong accept
+
+7. Confidence level
+
+    High
+
+
+
+Reviewer 2: 
+1. Summary. Provide a short summary (~3 - 6 sentences) of the paper. This should be based only on what's in the paper itself, without any opinion or analysis of your own.
+
+    The authors tested several off-the-shelf object detection algorithms on the mobile detection dataset and reported the results.
+
+2. Pros. Bullet points indicating good things about the paper (e.g., well-written, good results, thorough experimentation, clever idea, etc.)
+
+    The authors performed extensive experiments on an existing dataset using established object detection algorithms.
+
+3. Cons. Bullet points indicating bad things about the paper (e.g., difficult to understand, improperly evaluated, unoriginal, etc.)
+
+    The paper lacks clear novelty, as it does not propose any new methods or implementations and is limited to evaluating existing algorithms on an existing dataset.
+    The contribution of the paper is not clearly articulated. It does not present any novel methodology or implementation, but rather evaluates existing algorithms on a previously established dataset. While these experiments may serve as a useful introduction to the topic for the authors, the presented results lack novelty.
+
+4. Overall thoughts. Your overall thoughts on the paper. This is free form, and should justify your scores. This should be relatively detailed, and provide useful feedback to the authors.
+
+    Great experiments on existing data and existing object detection algorithms. I see no novelty.
+
+6. Recommendation
+
+    Weak reject
+
+7. Confidence level
+
+    High
+
+Reviewer #4
+1. Summary. Provide a short summary (~3 - 6 sentences) of the paper. This should be based only on what's in the paper itself, without any opinion or analysis of your own.
+
+    This paper evaluates three deep learning object detection architectures for the task of detecting distracted driving behaviors. The authors compare Faster R-CNN, SSD, and YOLOv11 architectures using a dataset of driver behaviors. The paper mainly answers: Which existing detector works best on this dataset? Performance is measured using accuracy metrics and inference speed to determine which model is most suitable for real-time driver monitoring systems. The paper provides practical recommendations for deploying object detection systems in safety-critical applications with stringent latency requirements.
+
+2. Pros. Bullet points indicating good things about the paper (e.g., well-written, good results, thorough experimentation, clever idea, etc.)
+
+    The problem addresses an important real-world safety problem related to distracted driving.
+    Both detection accuracy and real-time performance metrics are reported, which are essential considerations for deploying effective safety-critical systems in real-world scenarios
+    Results may help practitioners choose appropriate models for real-time deployment.
+
+3. Cons. Bullet points indicating bad things about the paper (e.g., difficult to understand, improperly evaluated, unoriginal, etc.)
+
+    Dataset Limitations: The dataset used in the study exhibits significant class imbalance, with certain distraction behaviors (e.g., smoking) being underrepresented. This imbalance may lead to biased model performance and reduced accuracy for minority classes
+    Lack of Temporal Analysis: The study focuses solely on image-based detection without incorporating temporal information from video sequences. This limits the ability to detect brief and subtle distraction behaviors that occur over time, such as glances at a mobile device.
+    No Real-World Deployment Testing: The study does not include results from real-world deployment, which could provide insights into the practical challenges and effectiveness of the proposed systems.
+
+4. Overall thoughts. Your overall thoughts on the paper. This is free form, and should justify your scores. This should be relatively detailed, and provide useful feedback to the authors.
+
+    Overall, the article provides a solid foundation for understanding the trade-offs between accuracy and speed in distracted driving detection systems, but could benefit from broader architectural comparisons, real-world testing, and discussions on ethical and cost considerations.
+
+6. Recommendation
+
+    Weak accept
+
+7. Confidence level
+
+    Moderate
